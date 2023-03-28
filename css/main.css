@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.page {
+    background: #0c2340;
+    font: 1.6rem/1 'Orbitron', sans-serif;
+    color: white;    
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    resize: both;
+    overflow: auto;
+    border: 1em solid white;
+}
+
+.page__item {
+    margin: 0.7em auto;
+}
+
+.page__item a {
+    color: currentColor;
+}
+
+.page__item a:hover,
+.page__item a:focus {
+    color: silver;
+    text-decoration: none;
+}
+
+.page__title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-top: 0.8em;
+    display: block;
+}
+
+.page__copy {
+    margin-top: 1em;
+}
+
+.page__copy li {
+    list-style: none;
+    margin-bottom: 0.8em;
+}
+ 
+.page__copy li:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (orientation: portrait) and (max-width: 320px) {
+    .page__logo {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 285px) {
+    .page {
+        padding: 0 0.3em;
+        border: 0;
+    }
+
+    .page__title {
+        font-size: 1.4rem;
+    }
+
+    .page__item {
+        margin: 0.2em auto;
+    }
+}
