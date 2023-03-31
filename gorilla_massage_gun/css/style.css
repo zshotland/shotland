@@ -1,0 +1,1016 @@
+/* Cascading Stylesheet | Campaign Version
+
+@Layout
+
+* --------------------------------------------------------------------- */
+/* Canvas | @Layout */
+/* set the minimum width of our canvas */
+.dtm__in--dv .l-outer,
+.dtm__in--dv .l-header,
+.dtm__in--dv .l-footer {
+	min-width: 980px;
+}
+
+/* set the maximum width of our canvas */
+.dtm__in--dv .l-header__in,
+.dtm__in--dv .l-outer__in,
+.dtm__in--dv .l-footer__in {
+	max-width: 980px;
+}
+
+.dtm__in--dv #content_top,
+.dtm__in--dv #content_bottom {
+	border-radius: 0;
+}
+
+.dtm__in--dv #content_top {
+	padding: 0 3px 3px;
+}
+
+/* set the padding of the canvas */
+.dtm__in--dv .l-outer__in {
+	padding: 0 3px;
+    border: none;
+}
+
+/* set the border style of our header & midline sections */
+.dtm__in--dv .l-header,
+.dtm .o-box--banner {
+	border-style: solid;
+}
+
+/* set the border width of our header section */
+.dtm__in--dv .l-header {
+	border-width: 0 0 3px;
+}
+
+/* set the border width of our midline section */
+.dtm .o-box--banner {
+	padding: 0;
+    position: relative;
+    border-width: 0 0 3px;
+    z-index: 10;
+    border-radius: 0;
+}
+
+/* --------------------------------------------------------------------- *
+
+@Theme
+
+* --------------------------------------------------------------------- */
+/*	@Layout Styles
+	@Desc: Set up our layout styles
+* --------------------------------------------------------------------- */
+body {
+    font: normal 16px/20px Arial, Helvetica, sans-serif;
+}
+b,
+strong {
+    font-weight: bold;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+h2,
+h3,
+h4,
+h5,
+p {
+    padding: 0;
+    margin: 0 0 10px;
+}
+
+p {
+    line-height: 20px;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+li {
+    padding: 0;
+    margin: 0
+}
+
+img {
+    max-width: inherit;
+}
+
+/* set the properties of the CSS shadow */
+.dtm .dtm__in--dv [class*="shadow-floor"] {
+    margin-bottom: 15px;
+}
+
+.dtm [class*="shadow-floor"]:before,
+.dtm [class*="shadow-floor"]:after {
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+}
+
+.dtm [class*="shadow-floor"]:before,
+.dtm [class*="shadow-floor"]:after {
+    top: 80%;
+    bottom: 1.3rem;
+}
+
+.dtm [class*="shadow-floor"]:before {
+    left: 4%;
+}
+
+.dtm [class*="shadow-floor"]:after {
+    right: 4%;
+}
+
+.dtm__in--mv [class*="shadow-floor"]:before,
+.dtm__in--mv [class*="shadow-floor"]:after {
+    display: none;
+}
+
+/* set the color of our canvas background */
+.l-outer__in {
+	background: white;
+}
+
+/* set the desktop color of the header & midline border color */
+.dtm__in--dv .l-header,
+.dtm .o-box--banner {
+	border-color: #fff;
+}
+
+/* set the color of our form headline (defaults to #333) */
+.c-brand--form .c-brand--form__legend {
+	background: #6adc5e;
+}
+
+/* set the color of our order review table (defaults to red) */
+.c-brand--table th, 
+.c-brand--table__th, 
+.orderItemsTable th, 
+.dtm__in--mv .c-brand--table tbody td:first-of-type {
+	background: #6adc5e;
+}
+
+/*	@Script Styles
+ * --------------------------------------------------------------------- */
+.js-eflex--fade > li:not(:first-child) {
+    position: absolute;
+}
+
+.slide-show {
+    overflow: hidden;
+    display: block;
+}
+
+/*	@Graphics
+ * --------------------------------------------------------------------- */
+
+/* apr styles */
+.dtm__in--dv [style^="--aspect-ratio"] {
+    width: var(--aspect-ratio-width);
+}
+
+.arp-clear {
+    background: none;
+}
+
+.arp-clear:after {
+    display: none;
+}
+
+/* set our desktop background image */
+.dtm__in--dv main.l-outer {
+	background: #252525 url(../images/desktop/bg.png?appV=[#DtmContext.ApplicationVersion#]) left top repeat-x;
+}
+
+/* set up our path to the sprite sheet */
+[class*="sprite"] {
+	background: url(../images/desktop/sprites.png?appV=[#DtmContext.ApplicationVersion#]) no-repeat;
+}
+
+/* Order Btn (Rect) */
+.sprite--btn-ord-rect {
+	background-position: 0 0;
+    width: 190px;
+    height: 55px;
+}
+
+.sprite--btn-ord-rect:hover,
+.sprite--btn-ord-rect:focus {
+	background-position: -190px 0;
+}
+
+/* Order Btn (Big) */
+.sprite--btn-ord-big {
+	background-position: 0 -65px;
+    width: 350px;
+    height: 55px;
+}
+
+.sprite--btn-ord-big:hover,
+.sprite--btn-ord-big:focus {
+	background-position: 0 -130px;
+}
+
+
+/* Process Order  */
+.sprite--btn-order-send {
+	background-position: 0 -195px;
+    width: 190px;
+    height: 55px;
+}
+
+.sprite--btn-order-send:hover,
+.sprite--btn-order-send:focus {
+	background-position: -190px -195px;
+}
+
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+    text-align: center;
+    clear: both;
+    position: relative;
+}
+
+.round-img {
+    border-radius: 13px;
+}
+
+/*	@Grouped Properties 
+ * --------------------------------------------------------------------- */
+[class*="ttl-"],
+[class*="txt-"] {
+    font-weight: normal;
+    font-style: normal;
+}
+
+.dtm__in--mv [class*="ttl-"] {
+    text-align: center;
+}
+
+.ttl-headline {
+    font-family: "ff-meta-web-pro-condensed", Helvetica, sans-serif;
+}
+
+.ttl-top,
+.dtm__in--dv .c-brand--subpage h2 {
+    font-family: "Gotham Ultra", "Arial Black", Gadget, sans-serif;
+}
+
+.ttl-main {
+    font-family: "Gotham Medium", Arial, Helvetica, sans-serif;
+}
+
+.ttl-mid {
+    font-family: "ff-meta-web-pro", Helvetica, sans-serif;
+}
+
+.ttl-order {
+    font-family: "Gotham Book", Arial, Helvetica, sans-serif;
+}
+
+.font-800 {
+    font-weight: 800;
+}
+
+.font-900,
+.ttl-mid {
+    font-weight: 900;
+}
+
+.font-itc {
+    font-style: italic;
+}
+
+/* Footer & Body background */
+.dtm__in--dv,
+.dtm__in--dv .l-footer {
+	background: #414646;
+}
+
+/* Header & Midline background */
+.main-bg,
+.dtm__in--dv .l-header,
+#offer-banner {
+    background: #d6d6d6; /* Old browsers */
+background: -moz-linear-gradient(top, #d6d6d6 0%, #e2e2e2 15%, #f5f5f5 34%, #fafafa 43%, #fbfbfb 53%, #f6f6f6 67%, #ebebeb 83%, #e3e3e3 88%, #d5d5d5 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #d6d6d6 0%,#e2e2e2 15%,#f5f5f5 34%,#fafafa 43%,#fbfbfb 53%,#f6f6f6 67%,#ebebeb 83%,#e3e3e3 88%,#d5d5d5 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #d6d6d6 0%,#e2e2e2 15%,#f5f5f5 34%,#fafafa 43%,#fbfbfb 53%,#f6f6f6 67%,#ebebeb 83%,#e3e3e3 88%,#d5d5d5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#d5d5d5',GradientType=0 ); /* IE6-9 */
+}
+
+/* Headline & Midline color */
+.color-spotlight {
+    color: #1e577b;
+}
+
+/* Main site color */
+.color-main,
+#content_top .color-main,
+.dtm__in--dv a,
+.intro__copy strong,
+.dtm__in--dv .c-brand--subpage h2,
+.dtm__in--dv .c-brand--subpage a {
+    color: #4bb341;
+}
+
+.color-grey,
+.dtm__in--dv .subpage-text-nav,
+.dtm__in--dv .subpage-text-nav a {
+    color: #666;
+}
+
+.color-grey-dk,
+.dtm__in--dv a:hover,
+.dtm__in--dv a:focus {
+    color: #111;
+}
+
+/* List Properties */
+.dtm .c-list--bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dtm .c-list--bullets li {
+    padding: 0 0 0 15px;
+    margin: 0 0 10px;
+}
+
+.dtm .c-list--bullets li:before {
+    background: #ffb71c;
+    width: 8px;
+    height: 8px;
+    top: 6px;
+    left: 0;
+    box-sizing: border-box;
+}
+
+/*	@Header Properties 
+ * --------------------------------------------------------------------- */
+.dtm__in--dv .l-header {
+    z-index: 15;
+    box-shadow: 0 3px 6px -1px rgba(84, 84, 84, 0.9);
+}
+
+.dtm__in--dv .l-header__in {
+    padding: 0 20px;
+    box-shadow: 0 -2.7em 2.3em rgba(0,0,0,0.3);
+}
+
+.dtm__in--dv .l-header__in .row-to-center {
+    height: 121px;
+}
+
+.dtm__in--dv .l-header__in .ttl-headline {
+    font-size: 30px;
+    line-height: 32px;
+}
+
+/*	@Offer Properties
+ * --------------------------------------------------------------------- */
+.ttl-offer {
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.gfx-offer .sprite--btn-ord-rect {
+    position: relative;
+    top: auto; right: auto;
+}
+
+.dtm__in--dv .gfx-offer {
+    height: 743px;
+}
+
+.dtm__in--dv .gfx-offer .article {
+    width: 575px;
+    height: 650px;
+    margin-left: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.dtm__in--dv .gfx-offer .article h2 {
+    background: url(../images/desktop/sprites.png?appV=[#DtmContext.ApplicationVersion#]) 0 -260px no-repeat;
+    font-size: 20px;
+    width: 390px;
+    height: 35px;
+    padding: 6px 0 0;
+    margin: 0 auto 12px;
+    clear: both;
+}
+
+.dtm__in--dv .gfx-offer #offord-row {
+    padding: 5px 0 10px;
+}
+
+.dtm__in--dv .payment {
+    font-size: 0.8rem;
+    width: 15rem;
+    margin: 0 auto;
+}
+
+.dtm__in--dv .gfx-offer .sidebar {
+    width: 340px;
+    margin: 12px 15px 0 0;
+    position: relative;
+    z-index: 10;
+}
+
+.dtm__in--dv .video {
+    background-color: #000;
+    width: 100%;
+    height: 192px;
+    margin: 0 auto;
+}
+
+.dtm__in--mv .video {
+    background: none;
+}
+
+/* set the size of the f&b wrapper */
+.dtm__in--dv .fb {
+    width: 340px;
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+.dtm__in--mv .fb {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* set the text color and size of the headline */
+.gfx-offer .ttl-top.fb__headline {
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* set the color of our banner and folds */
+.fb .fb__banner {
+    background: #6adc5e;
+    margin: 0;
+}
+
+.dtm__in--dv .fb .fb__banner {
+    height: 35px;
+    padding: 7px 0 0;
+}
+
+.dtm__in--mv .fb .fb__banner {
+    padding: 5px 0;
+}
+
+.fb .fb__banner:before,
+.fb .fb__banner:after {
+    display: none;
+}
+
+/*.fb .fb__in:before, .fb .fb__in:after {
+    display: none;
+}*/
+
+/* set the color & size of our list */
+.fb .fb__list {
+    background: white;
+    font-size: 16px;
+    color: #141414;
+    list-style: none;
+    padding: 8px 30px 10px;
+    left: 0;
+    border-color: white;
+    border-width: 3px 0;
+    box-shadow: inset 0 0 10px rgba(210,210,210,.75);
+}
+
+.fb .fb__list li:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Midline Styles */
+#offer-banner h3 {
+    font-size: 32px;
+    line-height: 32px;
+    margin: 0;
+}
+
+.dtm__in--dv #offer-banner {
+    height: 93px;
+    padding: 0 20px;
+}
+
+.dtm__in--mv #offer-banner {
+    padding: 10px;
+}
+
+.dtm__in--mv #offer-banner h3 {
+    font-size: 34px;
+    line-height: 36px;
+}
+
+/*	@Middle Properties
+ * --------------------------------------------------------------------- */
+#mid-wrap hr {
+    background-color: #bdbdbd;
+    height: 3px;
+    margin: 3px auto;
+    clear: both;
+}
+
+.dtm__in--mv #mid-wrap {
+    padding: 10px 0 0;
+}
+
+.ttl-mid {
+    font-size: 32px;
+    line-height: 34px;
+}
+
+.mid-banner {
+    padding-bottom: 15px;
+}
+
+.dtm__in--mv .mid-copy {
+    width: 100%;
+}
+
+.mid-copy .sprite--btn-ord-big {
+    margin-top: 15px;
+    clear: both;
+}
+
+.dtm .mid-li {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+    display: flex; 
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.dtm__in--dv #content_top .mid-li__in:first-child {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.dtm__in--dv #content_top .mid-li__in:last-child {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.dtm__in--mv .mid-img {
+    margin: 0 auto 10px;
+}
+
+.mid-mar {
+    margin: 0 auto 10px;
+}
+
+.mid-side {
+    text-align: center;
+}
+
+.dtm__in--mv .mid-side {
+    width: 100%;
+}
+
+.mid-side .sprite--btn-ord-rect {
+    margin: 15px auto 0;
+    clear: both;
+}
+
+/* Great Styles */
+.great {
+    background-color: #cfffca;
+    font-size: 22px;
+    line-height: 24px;
+    color: #2f2f2f;
+    text-align: center;
+    box-shadow:inset 0 0 50px 15px #6adc5e;
+}
+
+.great__ttl {
+    color: #2f2f2f;
+}
+
+.dtm__in--dv .great__in {
+    padding: 30px 20px;
+    box-shadow:inset 0 12px 8px -10px #3f8139;
+}
+
+.dtm__in--dv .great__in .mid-li__in {
+    padding: 0 7px;
+}
+
+.dtm__in--mv .great__in {
+    padding: 10px;
+}
+
+/* Intro Styles */
+.intro {
+    padding: 45px 50px;
+}
+
+.dtm__in--mv .intro {
+    padding: 10px 0;
+}
+
+.dtm__in--dv .intro__copy {
+    padding-right: 45px;
+}
+
+.intro__ttl {
+    font-size: 24px;
+    line-height: 26px;
+    color: #414646;
+}
+
+.intro__ttl strong.ttl-mid {
+    font-size: 30px;
+    line-height: 32px;
+}
+
+.intro__ttl sup {
+    font-size: 45%;
+    bottom: 15px;
+}
+
+.dtm__in--dv .intro__side {
+    width: 385px;
+}
+
+.dtm__in--dv .intro__side .video {
+    height: 305px;
+}
+
+.dtm__in--mv .intro__side .mid-li {
+    padding-top: 10px;
+}
+
+/*	@Form Properties 
+ * --------------------------------------------------------------------- */
+
+#order .center-text {
+    background: url(../images/desktop/bg_formttl.png?appV=[#DtmContext.ApplicationVersion#]) left top repeat-x;
+    width: 93%;
+    height: 115px;
+    padding: 25px 0;
+    margin: 20px auto;
+}
+
+#order h5.ttl-top {
+    font-size: 32px;
+    line-height: 34px;
+    color: #ffb71c;
+}
+
+#order p.ttl-order {
+    font-size: 24px;
+    line-height: 26px;
+    color: #fff;
+}
+
+#order p.ttl-order strong.ttl-mid {
+    font-size: 29px;
+    line-height: 31px;
+    color: #6adc5e;
+}
+
+.dtm__in--dv #content_bottom {
+    padding: 0 3px 1px;
+}
+
+.dtm__in--dv #content_bottom,
+.dtm__in--dv #content_bottom p,
+.dtm__in--dv .l-disclaimer,
+.dtm__in--dv .l-disclaimer strong {
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.dtm__in--dv #content_bottom #form hr {
+    background-color: #d7d7d7;
+    height: 3px;
+}
+
+.dtm__in--dv .c-brand--form__submission p {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.dtm__in--dv #content_bottom #formProduct {
+    padding-top: 50px;
+}
+
+/*.colors {
+    padding-bottom: 1em;
+    overflow: hidden;
+    clear: both;
+}
+
+.colors:last-child {
+    padding-bottom: 0;
+}*/
+
+/* Offer Details Properties */
+.dtm__in--dv .l-disclaimer {
+    padding: 15px 20px 5px;
+    border-radius: 0;
+}
+
+/*	@Upsell Properties 
+ * ---------------------------------------------------------------------
+.\@b .dtm__in--dv #content_top {
+    padding-top: 20px;
+} */
+
+.\@b .upsell__qty i {
+    font-style: normal;
+}
+
+/*	@Footer Properties 
+ * --------------------------------------------------------------------- */
+.dtm__in--dv .l-footer {
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    border: none;
+}
+
+.dtm__in--dv .l-footer a {
+    color: #fff;
+    text-decoration: none;
+}	
+
+.dtm__in--dv .l-footer a:hover {
+    color: #dedede;
+    text-decoration: underline;
+}
+
+.dtm__in--dv .l-footer ul,
+.dtm__in--dv .l-footer p {
+    padding: 0 0 12px;
+    margin: 0;
+}
+
+.dtm__in--dv .l-footer ul li {
+    padding: 0 0 0 5px;
+    border-right: none;
+}
+
+.dtm__in--dv .l-footer ul li a {
+    padding-right: 5px;
+}
+
+.dtm__in--dv .l-footer ul li:after {
+    color: #fff;
+    content: "|";
+}
+
+.dtm__in--dv .l-footer ul li:last-child:after,
+.dtm__in--dv .l-footer ul li.footer-last:after {
+    content: "";
+}
+
+.dtm__in--dv .l-footer p:last-child {
+    padding-bottom: 0;
+}
+
+.dtm__in--mv .l-footer p {
+    margin: 0;
+}
+
+/*	@Subpage Properties 
+ * --------------------------------------------------------------------- */
+.dtm--subpage .dtm__in--dv #content_top {
+    padding: 12px 3px;
+}
+
+.dtm__in--dv .c-brand--subpage {
+    width: auto;
+    padding: 0 15px 0;
+    border-right: 1px solid #bdbcbd;
+}
+
+.dtm__in--dv .c-brand--subpage h2 {
+    font-size: 45px;
+    line-height: 47px;
+    margin-bottom: 0;
+}
+
+.dtm__in--dv .c-brand--subpage,
+.dtm__in--dv .c-brand--subpage p {
+    font-size: 13px;
+    line-height: 17px;
+}
+
+.dtm__in--dv .c-brand--subpage ul.c-list--bullets {
+    margin-left: 0;
+}
+
+.dtm__in--dv .c-brand--subpage ul.c-list--bullets li {
+    padding-left: 18px;
+}
+
+/*.
+dtm__in--dv .c-brand--subpage ul.c-list--bullets li:before {
+    background: #c43d70;
+}
+*/
+
+.dtm__in--dv .subpage-text-nav {
+    margin-top: 5px;
+}
+
+.dtm__in--dv .c-brand--subpage + aside {
+    width: 317px;
+    padding: 0 7px 0 10px;
+    text-align: center;
+}
+
+.dtm__in--dv .c-brand--subpage + aside #prc-img {
+    margin: 5px auto;
+}
+
+.dtm__in--dv .c-brand--subpage + aside .sprite--btn-ord-rect {
+    margin: 5px auto 0;
+}
+
+/*	@Mobile Properties
+* --------------------------------------------------------------------- */
+
+/* set the color of our mobile view-full-site button */
+.dtm .vfs {
+    background: #6adc5e;
+}
+
+.dtm__in--mv a.order-button,
+.dtm__in--mv .new-btns [href*="#order"] {
+    background: #ffb71c;
+}
+
+.dtm__in--mv .offer-area {position: relative; display: block;}
+
+/* overlay the payment graphics over the offer image */
+.dtm__in--mv .offer-area .payment {position: absolute; z-index: 15;}
+
+@media all and ( max-width : 640px ) {
+    /* overlay the payment graphics over the offer image */
+    .dtm__in--mv .offer-area .payment {
+        /* can control the position of the graphics | can also use left & top as well if necessary */
+        top: 34.5vw;
+        right: 13.5vw;
+
+        /* can control the container of the graphics */
+        width: 26.4vw;
+
+        /* can control the size of the graphics */
+        font-size: 1.5vw;
+    }
+}
+
+/* for screens larger than 640px width */
+@media all and ( min-width : 641px ) {
+    .dtm__in--mv .offer-area .payment {
+        /* can control the position of the graphics | can also use left & top as well if necessary */
+        top: 21.5rem;
+        right: 12.5rem;
+
+        /* can control the container of the graphics */
+        width: 14.6rem;
+
+        /* can control the size of the graphics */
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (orientation: portrait) {
+    .dtm__in--mv #offer-banner h3 {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .dtm .dtm__in--mv .mid-li,
+    .dtm .dtm__in--mv .mid-li {
+        display: block;
+    }
+
+    .dtm .dtm__in--mv .mid-li__in {
+        margin-bottom: 10px;
+    }
+
+    .dtm .dtm__in--mv .mid-li__in:last-child {
+        margin-bottom: 0;
+    }
+
+    .dtm__in--mv .great .mid-li {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .dtm__in--mv .great .mid-li__in {
+        padding: 3px;
+        flex: 0 1 50%
+    }
+
+    .dtm__in--mv .great__ttl {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .dtm__in--mv .intro__ttl strong.ttl-mid {
+        display: block;
+    }
+
+}
+
+@media screen and (orientation: landscape) {
+    .dtm__in--mv .gfx-offer .ttl-top.fb__headline {
+        font-size: 28px;
+        line-height: 26px;
+    }
+
+    .dtm__in--mv .fb .fb__banner {
+        padding-top: 3px;
+    }
+
+    .dtm__in--mv .c-list--bullets {
+        font-size: 33px;
+        line-height: 35px;
+    }
+
+    .dtm__in--mv .fb .c-list--bullets {
+        padding-left: 20px;
+    }
+
+    .dtm__in--mv .fb .c-list--bullets li {
+        padding-left: 30px;
+    }
+    
+    .dtm__in--mv .c-list--bullets li:before {
+        width: 14px;
+        height: 14px;
+        top: 10px;
+    }
+
+    .dtm__in--mv .mid-li {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+	.dtm__in--mv .mid-li__in {
+        padding: 3px;
+        flex: 0 1 33%;
+    }
+
+    .dtm__in--mv .intro__side .mid-li__in {
+        flex: 0 1 50%;
+    }
+    
+}
+
+/* add fingerprint nav
+[#Partial.CSS.Module.FingerPrintNav#] */
+.fp-nav__a:hover,
+.fp-nav__a:focus {
+    background: #6894ff;
+}
+
+.fp-nav__a {
+    background: #1751DB;
+}
+
+.fp-nav__a--order {
+    background: red;
+}
+
+.fp-nav__a--order:hover,
+.fp-nav__a--order:focus {
+    background: #ff5252;
+}
